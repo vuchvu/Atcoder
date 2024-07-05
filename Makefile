@@ -2,7 +2,7 @@
 
 SRC:=$(wildcard *.cpp)
 
-a.out:
+a.out: $(firstword $(SRC))
 	g++ -std=gnu++20 -O2 -DONLINE_JUDGE -DATCODER \
 	-Wall -Wextra \
 	-mtune=native -march=native \
